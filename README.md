@@ -124,7 +124,6 @@ chmod +x build.sh recovery.sh
 
 ### Source Data
 
-The raw sequencing data are available from the Sequence Read Archive (SRA) under accession number `xxx`.
 The raw sequencing data are available from the Sequence Read Archive (SRA) under BioProject accession `PRJNA1514025`.
 
 Using the Pool-120K dataset as an example, the archive contains the following sequencing data in FASTQ format:
