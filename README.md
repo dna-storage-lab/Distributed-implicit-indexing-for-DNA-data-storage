@@ -1,4 +1,4 @@
-# Full data sequence superimposed indexing for short-fragment DNA data storage
+# Distributed implicit indexing for reliable oligonucleotide-based DNA data storage
 
 ![Workflow](intro.png)
 
@@ -16,12 +16,12 @@
 
 ## Overview
 
-Synthetic DNA is a promising medium for data storage due to its high storage density and long-term stability. In short-fragment DNA storage, user data are distributed across unordered short DNA strands. However, reliable readout is hindered by the fragility of localized indices and the high computational cost of payload reconstruction. To address these challenges, we propose a low-coverage readout framework based on full-data-sequence superimposed indexing for short-fragment DNA data storage. The proposed method enables reliable data recovery at low sequencing coverage across a wide range of error rates, providing a practical strategy for large-scale DNA data storage.
+Synthetic DNA is a promising medium for data storage due to its high storage density and long-term stability. For DNA storage with oligo pools, digital data are distributed across unordered short DNA strands. However, reliable readout is hindered by the fragility of localized indices and the high computational cost of payload reconstruction. To address these challenges, we developed distributed implicit indexing with pseudo-noise sequence (PNS) superimposition for low-coverage readout. The proposed method enables reliable data recovery at low sequencing coverage across a wide range of error rates, providing an alternative to dedicated localized indices in oligo-based DNA storage.
 
 This repository provides two readout pipelines designed for different error conditions:
 
-1. **Fast recovery:** Under low-error conditions, bit-wise consensus (BW) is used to rapidly generate probabilistic soft information for decoding, enabling fast data recovery.
-2. **Progressive recovery:** Under high-error conditions, a progressive error-correction framework based on the forward–backward algorithm (FBA) is employed to achieve reliable data recovery.
+1. **Fast recovery:** For Illumina reads with low indel rates, bit-wise consensus (BW) is used to rapidly generate probabilistic soft information for decoding, enabling fast data recovery.
+2. **Progressive recovery:** For indel-prone reads, a progressive error-correction framework based on the forward–backward algorithm (FBA) is employed to achieve reliable data recovery.
 
 The software is implemented in C/C++ and CUDA. Execution steps are organized into modular shell scripts to facilitate deployment on Linux systems. 
 
